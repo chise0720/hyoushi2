@@ -215,7 +215,7 @@ function showRes(){
     <p style="font-size:10px;color:#6B5B4E;line-height:1.8;letter-spacing:0.03em;">
       ;��M,��o�;���Y_�n ,�j�1h�nL��hkW_�ngY���X�ko��LB�~YS�k�LB���B-n��-n�o;+ji�_�xT��O`UD
     </p>
-  </div><div class="act-row"><button class="btn-share" onclick="shareRes()">結果をSNSでシェア</button><button class="btn2" onclick="reset()">もう一度診断する</button></div>`;
+  </div><div style="padding:0 16px;margin-top:4px"><button class="btn2" onclick="reset()">もう一度診断する</button></div>`;
   document.getElementById('rc').innerHTML=h;
   window._T=T;window._P=pcts;
   show('s-result');
@@ -229,6 +229,10 @@ function shareRes(){
   navigator.clipboard.writeText(txt).then(()=>alert('コピーしました🌸')).catch(()=>alert('手動でコピーしてください'));
 }
 function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('show'));document.getElementById(id).classList.add('show');window.scrollTo(0,0);}
+window.startQuiz=startQuiz;
+window.goNext=goNext;
+window.goBack=goBack;
+window.reset=reset;
 </script>
 </body>
 </html>
